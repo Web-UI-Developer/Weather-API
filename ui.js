@@ -1,5 +1,6 @@
 class UI {
   constructor() {
+
     this.location = document.getElementById('w-location');
     this.desc = document.getElementById('w-desc');
     this.string = document.getElementById('w-string');
@@ -10,9 +11,11 @@ class UI {
     this.dewpoint= document.getElementById('w-dewpoint');
     this.wind = document.getElementById('w-wind');
     this.visibility = document.getElementById('w-visibility');
+
   }
 
   paint(weather) {
+
     this.location.textContent = weather.display_location.full;
     this.desc.textContent = weather.weather;
     this.string.textContent = weather.temperature_string;
@@ -22,5 +25,6 @@ class UI {
     this.dewpoint.textContent = `DewPoint: ${weather.dewpoint_string}`;
     this.wind.textContent = `Wind: ${weather.wind_string}`;
     this.visibility.textContent = `visibility:${weather.visibility_mi} mi`;
+    
   }
 }
